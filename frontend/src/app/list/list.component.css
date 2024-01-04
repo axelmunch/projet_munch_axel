@@ -28,3 +28,17 @@ thead th {
 .total {
   text-align: center;
 }
+
+.btnBuyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnBuy {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}

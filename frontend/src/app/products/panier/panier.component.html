@@ -26,3 +26,13 @@
 </div>
 
 <h3 class="total">Total: {{ total }}€</h3>
+
+<div class="btnBuyContainer">
+  <button
+    class="btnBuy"
+    [disabled]="(liste$ | async)?.length === 0"
+    (click)="clearCart()"
+  >
+    Buy!!!
+  </button>
+</div>

@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Select, Store } from '@ngxs/store';
-import { Product } from 'src/shared/models/product';
-import { DelProduct } from 'src/shared/actions/product-action';
-import { ProductState } from 'src/shared/states/product-state';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from "@angular/core";
+import { Select, Store } from "@ngxs/store";
+import { Product } from "src/shared/models/product";
+import { DelProduct, ClearProduct } from "src/shared/actions/product-action";
+import { ProductState } from "src/shared/states/product-state";
+import { Observable } from "rxjs";
 
 @Component({
-  selector: 'app-panier',
-  templateUrl: './panier.component.html',
-  styleUrls: ['../../list/list.component.css'],
+  selector: "app-panier",
+  templateUrl: "./panier.component.html",
+  styleUrls: ["../../list/list.component.css"],
 })
 export class PanierComponent implements OnInit {
   total: number = 0;
@@ -27,5 +27,9 @@ export class PanierComponent implements OnInit {
 
   delProduct(p: Product): void {
     this.store.dispatch(new DelProduct(p));
+  }
+
+  clearCart(): void {
+    this.store.dispatch(new ClearProduct());
   }
 }

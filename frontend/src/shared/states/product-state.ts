@@ -1,17 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import {
   Action,
   Selector,
   State,
   StateContext,
   createSelector,
-} from '@ngxs/store';
-import { AddProduct, DelProduct } from '../actions/product-action';
-import { ProductStateModel } from './product-state-model';
-import { Product } from '../models/product';
+} from "@ngxs/store";
+import {
+  AddProduct,
+  DelProduct,
+  ClearProduct,
+} from "../actions/product-action";
+import { ProductStateModel } from "./product-state-model";
+import { Product } from "../models/product";
 
 @State<ProductStateModel>({
-  name: 'products',
+  name: "products",
   defaults: {
     products: [],
   },
@@ -59,6 +63,13 @@ export class ProductState {
             return ret;
           })
         : [],
+    });
+  }
+
+  @Action(ClearProduct)
+  clear({ patchState }: StateContext<ProductStateModel>) {
+    patchState({
+      products: [],
     });
   }
 }
