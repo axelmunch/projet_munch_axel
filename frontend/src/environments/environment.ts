@@ -6,4 +6,5 @@ export const environment = {
   backendLoginClient: `${route}/api/utilisateur/login`,
   backendCreateClient: `${route}/api/utilisateur/create`,
   backendCatalogue: `${route}/api/catalogue`,
+  backendProduct: `${route}/api/catalogue`,
 };

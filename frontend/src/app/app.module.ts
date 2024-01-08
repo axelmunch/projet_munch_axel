@@ -16,11 +16,13 @@ import { HomeComponent } from "./home/home.component";
 import { CartComponent } from "./cart/cart.component";
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { ApiHttpInterceptor } from "./http-interceptor";
+import { ProductComponent } from './product/product.component';
 
 const appRoutes: Routes = [
-//   { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "cart", component: CartComponent },
+  { path: "product/:id", component: ProductComponent },
 
 //   { path: "**", redirectTo: "/home", pathMatch: "full" },
 ];
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomeComponent,
     CartComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

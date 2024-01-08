@@ -1,0 +1,17 @@
+<hr />
+<div class="product-container">
+  <div class="product">
+    <h2>
+      {{ product.name }}
+    </h2>
+    <div *ngIf="product.image">
+      <img [src]="product.image" />
+    </div>
+    <div>{{ product.price }}€</div>
+    <div>
+      {{ product.description }}
+    </div>
+
+    <button (click)="addProduct(product)">Add to cart</button>
+  </div>
+</div>

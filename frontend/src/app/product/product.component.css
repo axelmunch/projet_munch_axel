@@ -1,0 +1,32 @@
+.product-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.product {
+  max-width: 800px;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.product * {
+  margin: 2rem;
+}
+
+.product h2 {
+  text-decoration: underline;
+}
+
+.product img {
+  border: 1px solid #ccc;
+  border-radius: 1.5rem;
+  max-width: calc(100% - 4rem);
+  height: auto;
+}
+
+.product button {
+  padding: 0.5rem 1rem;
+  background-color: #8c8;
+  border-radius: 0.5rem;
+}

@@ -44,3 +44,18 @@ exports.get = (req, res) => {
       });
     });
 };
+
+exports.getById = (req, res) => {
+  const id = req.params.id;
+
+  Catalogue.findByPk(id)
+    .then((data) => {
+      res.setHeader("Content-Type", "application/json");
+      res.send(data);
+    })
+    .catch((err) => {
+      res.status(400).send({
+        message: "Error retrieving catalogue, " + err.message,
+      });
+    });
+};

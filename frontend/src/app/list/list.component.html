@@ -14,11 +14,11 @@
           {{ item.ref }}
         </td>
         <td colspan="4">
-          {{ item.name }}
+          <a [routerLink]="['/product', item.id]">
+            {{ item.name }}
+          </a>
         </td>
-        <td>
-          {{ item.price }}€
-        </td>
+        <td>{{ item.price }}€</td>
         <td>
           <button (click)="addProduct(item)">+</button>
         </td>

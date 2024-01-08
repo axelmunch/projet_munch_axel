@@ -1,29 +1,33 @@
-<div *ngIf="cnx">✅ Connecté</div>
+<div *ngIf="cnx">✅ Logged in</div>
 <div *ngIf="!cnx">
-    <div class="compte">
-        <div>
-          <h2>Se connecter</h2>
-          <label for="login">Login : </label><input [(ngModel)]="login" /><br />
-          <label for="password">Mot de passe : </label
-          ><input [(ngModel)]="password" type="password" /><br />
-          <br />
-          <button (click)="connexion()">Connexion</button>
-        </div>
-        <div>
-          <h2>Créer un compte</h2>
-          <label for="prenom">Prénom : </label><input [(ngModel)]="crPrenom" /><br />
-          <label for="nom">Nom : </label><input [(ngModel)]="crNom" /><br />
-          <label for="email">Email : </label><input [(ngModel)]="crEmail" /><br />
-          <label for="login">Login : </label><input [(ngModel)]="crLogin" /><br />
-          <label for="password">Mot de passe : </label
-          ><input [(ngModel)]="crPassword" type="password" /><br />
-          <br />
-          <button (click)="creer()">Créer un compte</button>
-        </div>
+  <div class="compte">
+    <div>
+      <h2>Log in</h2>
+      <label for="login">Login: </label><input [(ngModel)]="login" /><br />
+      <label for="password">Password: </label
+      ><input [(ngModel)]="password" type="password" /><br />
+      <br />
+      <button (click)="connexion()">Connexion</button>
     </div>
+    <div>
+      <h2>Sign in</h2>
+      <label for="prenom">First name: </label
+      ><input [(ngModel)]="crPrenom" /><br />
+      <label for="nom">Last name: </label><input [(ngModel)]="crNom" /><br />
+      <label for="email">Email: </label><input [(ngModel)]="crEmail" /><br />
+      <label for="login">Login: </label><input [(ngModel)]="crLogin" /><br />
+      <label for="password">Password: </label
+      ><input [(ngModel)]="crPassword" type="password" /><br />
+      <br />
+      <button (click)="creer()">Créer un compte</button>
+    </div>
+  </div>
 </div>
 
 <hr />
 
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div *ngIf="cnx">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</div>
+<div *ngIf="!cnx">Please log in.</div>

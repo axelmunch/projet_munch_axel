@@ -22,6 +22,8 @@ export class PanierComponent implements OnInit {
       liste.forEach((p) => {
         this.total += p.price;
       });
+      // Round total, 2 decimals
+      this.total = Math.round(this.total * 100) / 100;
     });
   }
 
