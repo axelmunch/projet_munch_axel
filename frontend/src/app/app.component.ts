@@ -35,6 +35,7 @@ export class AppComponent {
   crNom: string = "";
   crPrenom: string = "";
   crEmail: string = "";
+  crTelephone: string = "";
   crLogin: string = "";
   crPassword: string = "";
 
@@ -44,6 +45,7 @@ export class AppComponent {
         this.crNom,
         this.crPrenom,
         this.crEmail,
+        this.crTelephone,
         this.crLogin,
         this.crPassword
       )

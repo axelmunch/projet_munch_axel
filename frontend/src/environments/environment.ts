@@ -1,4 +1,4 @@
-const route = "https://projet-web.onrender.com";
+const route = "https://projetmunchaxelbackend-production.up.railway.app";
 
 export const environment = {
   production: false,

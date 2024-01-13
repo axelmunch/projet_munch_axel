@@ -28,6 +28,7 @@ export class ApiService {
     nom: string,
     prenom: string,
     email: string,
+    telephone: string,
     login: string,
     password: string
   ): Observable<Client> {
@@ -44,6 +45,8 @@ export class ApiService {
       prenom +
       "&email=" +
       email +
+      "&telephone=" +
+      telephone +
       "&login=" +
       login +
       "&password=" +
